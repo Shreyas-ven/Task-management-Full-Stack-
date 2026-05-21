@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Student Productivity Portal</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <header>
+            <h1>Welcome to Daily Task</h1>
+            <p>Manage your Daily Tasks Here! </p>
+        </header>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="register.html">Register</a>
+            <a href="tasks.html">Tasks</a>
+            <a href="signup.html"id="signupLink">Sign Up</a>
+            <a href="login.html" id="loginLink">Login</a>
+            <a href="#" id="logoutBtn">Logout</a>
+            
+        </nav>
+        <section class = "register-section">
+            <h1>DAILY TASKS</h1>
+            <div >
+                <label>Add Task :</label>
+                <input type="text" id="taskInput"><br><br>
+                <button id="addTaskBtn">Add Task </button>
+            </div>
+            <table>
+                <thead>
+                    <th>Task</th>
+                    <th>Action</th>
+                </thead>
+                <tbody id ="taskList">
+
+                </tbody>
+            </table>
+        </section>
+
+        <footer>
+        <p>&copy; 2026 Student Productivity Portal | All Rights Reserved</p>
+        <p>Email: support@studentportal.com | Phone: +91 80733 18562</p>
+        </footer>
+        <script src="script.js"></script>
+    </body>
+</html>
