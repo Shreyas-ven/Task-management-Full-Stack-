@@ -31,7 +31,7 @@ public class SignupServlet extends HttpServlet {
 		
 		
 		if(status) {
-			response.sendRedirect("login.html");
+			response.sendRedirect("login.jsp");
 		}else {
 			response.getWriter().println("SignUp Failed!");
 		}

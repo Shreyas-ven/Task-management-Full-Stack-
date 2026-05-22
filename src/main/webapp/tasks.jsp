@@ -1,3 +1,11 @@
+<%
+	Integer userId = (Integer) session.getAttribute("userId");
+	if (userId == null){
+		response.sendRedirect("login.jsp");
+		return;
+	}
+%>
+
 <!DOCTYPE html>
 <html>
     <head>
@@ -32,9 +40,13 @@
         <section class = "register-section">
             <h1>DAILY TASKS</h1>
             <div >
-                <label>Add Task :</label>
-                <input type="text" id="taskInput"><br><br>
+            	<form action ="addTask"  method="post">
+            	<label>Add Task :</label>
+                <input type="text" name="taskName"><br><br>
                 <button id="addTaskBtn">Add Task </button>
+            	
+            	</form>
+                
             </div>
             <table>
                 <thead>

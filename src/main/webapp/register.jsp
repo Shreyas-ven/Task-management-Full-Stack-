@@ -31,22 +31,22 @@
         </nav>
 
         <section class="register-section">
-    <form class="register-form">
+    <form class="register-form" action="registerStudent" method="post">
         <h2>Student Registration</h2>
 
         <div class="input-group">
             <label>Full Name</label>
-            <input type="text" placeholder="Enter your full name">
+            <input type="text" placeholder="Enter your full name" name="name">
         </div>
 
         <div class="input-group">
             <label>Email</label>
-            <input type="email" placeholder="Enter your email">
+            <input type="email" placeholder="Enter your email" name="email">
         </div>
 
         <div class="input-group">
             <label>Phone</label>
-            <input type="tel" placeholder="Enter your phone number">
+            <input type="tel" placeholder="Enter your phone number" name="phone">
         </div>
 
         <div class="input-group">
@@ -54,11 +54,11 @@
 
             <div class="gender-box">
                 <label>
-                    <input type="radio" name="gender"> Male
+                    <input type="radio" name="gender" value="Male"> Male
                 </label>
 
                 <label>
-                    <input type="radio" name="gender"> Female
+                    <input type="radio" name="gender" value="Female"> Female
                 </label>
             </div>
         </div>
@@ -66,14 +66,25 @@
         <div class="input-group">
             <label>Course</label>
 
-            <select>
-                <option>Select Course</option>
-                <option>Python</option>
-                <option>Java</option>
-                <option>DBMS</option>
-                <option>HTML and CSS</option>
-            </select>
+         	<select name="course">
+
+        	<option value="">Select Course</option>
+
+       		 <option value="Python">Python</option>
+
+       		 <option value="Java">Java</option>
+
+        	<option value="DBMS">DBMS</option>
+
+       		 <option value="HTML and CSS">HTML and CSS</option>
+
+    </select>
+    
+    
         </div>
+        
+        <label>Skills:</label>
+            <input type="text" placeholder="Enter your skills" name="skills">
 
         <button type="submit">Register</button>
     </form>
