@@ -13,16 +13,7 @@ if(currentPage.includes("tasks.html")){
 }
 
 
-//Logout button login
-let LogoutButton = document.getElementById("logoutBtn");
 
-if(LogoutButton){
-    LogoutButton.addEventListener("click",function(){
-        localStorage.removeItem("isLoggedIn");
-        alert("Logged Out Successfully!");
-        window.location.href = "index.html";
-    });
-}
 
 //Dynamic NavBar Logic
 

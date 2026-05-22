@@ -5,18 +5,29 @@
         <link rel="stylesheet" href="style.css">
     </head>
     <body>
+    <%
+		String userName = (String) session.getAttribute("userName");  
+    %>
         <header>
             <h1>Welcome to Daily Task</h1>
             <p>Manage your Daily Tasks Here! </p>
         </header>
         <nav>
-            <a href="index.html">Home</a>
-            <a href="register.html">Register</a>
-            <a href="tasks.html">Tasks</a>
-            <a href="signup.html"id="signupLink">Sign Up</a>
-            <a href="login.html" id="loginLink">Login</a>
-            <a href="#" id="logoutBtn">Logout</a>
+            <a href="index.jsp">Home</a>
+            <a href="register.jsp">Register</a>
+            <a href="tasks.jsp">Tasks</a>
             
+            <% 
+            	if (userName == null){
+            %>
+            	<a href="signup.jsp"id="signupLink">Sign Up</a>
+            	<a href="login.jsp" id="loginLink">Login</a>
+            <%
+            	}
+            	else{
+            %>
+            	<a href="logout" >Logout</a>
+            <% } %>
         </nav>
         <section class = "register-section">
             <h1>DAILY TASKS</h1>
