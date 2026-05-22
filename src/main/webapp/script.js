@@ -1,38 +1,5 @@
 
 
-let loginForm=document.getElementById("loginForm");
-
-if(loginForm){
-    loginForm.addEventListener("submit", function(event){
-        event.preventDefault();
-        let email = document.getElementById("email").value;
-        let password = document.getElementById("password").value;
-
-        //reding the data from local storage 
-        let user = JSON.parse(localStorage.getItem("user"));
-
-        if(email==user.email && password == user.password){
-            alert("Login Successfull!");
-            //redirect to home page
-            localStorage.setItem("isLoggedIn","true")
-            window.location.href="index.html";
-        }else{
-            alert("Invalid Email or Password!");
-        }
-    });
-}
-
-let heading=document.getElementById("welcomeMessage");
-
-if(heading){
-    let user=JSON.parse(localStorage.getItem("user"));
-    let isLoggedIn = localStorage.getItem("isLoggedIn");
-
-    if(user && isLoggedIn === "true"){
-    heading.innerHTML = "Welcome " + user.name + "!";
-}
-}
-
 // Protecting the tasks.html from opening without log in
 let currentPage=window.location.pathname;
 

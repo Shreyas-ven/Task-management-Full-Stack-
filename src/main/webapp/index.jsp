@@ -5,6 +5,11 @@
         <link rel="stylesheet" href="style.css">
     </head>
     <body>
+    <%
+		String userName = (String) session.getAttribute("userName");
+    
+    
+    %>
         <header>
             <h1>Student Productivity Portal</h1>
             <p>Manage your Daily Tasks Here!</p>
@@ -13,12 +18,27 @@
             <a href="index.html">Home</a>
             <a href="register.html">Register</a>
             <a href="tasks.html">Tasks</a>
-            <a href="signup.html"id="signupLink">Sign Up</a>
-            <a href="login.html" id="loginLink">Login</a>
-            <a href="#" id="logoutBtn">Logout</a>
+            
+            <% 
+            	if (userName == null){
+            %>
+            	<a href="signup.html"id="signupLink">Sign Up</a>
+            	<a href="login.html" id="loginLink">Login</a>
+            <%
+            	}
+            	else{
+            %>
+            	<a href="#" id="logoutBtn">Logout</a>
+            <% } %>
         </nav>
         <section>
-            <h1 id="welcomeMessage">Welcome Student to our new Productivity Portal</h1>
+            <h1 >
+            <% if (userName != null){ %>
+            	Welcome <%= userName %> !
+            <% }else{%>
+            	Welcome Student to our new Productivity Portal
+            <%} %>
+            </h1>
             <div class="box">
                         <p>
             Track your daily activities, organize assignments, and improve your productivity
